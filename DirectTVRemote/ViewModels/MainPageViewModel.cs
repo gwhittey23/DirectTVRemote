@@ -5,7 +5,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Template10.Services.NavigationService;
 using Windows.UI.Xaml.Navigation;
-
+using DirectTVRemote.Models;
+using System.Diagnostics;
 namespace DirectTVRemote.ViewModels {
     public class MainPageViewModel : ViewModelBase {
         public MainPageViewModel() {
@@ -13,7 +14,7 @@ namespace DirectTVRemote.ViewModels {
                 Value = "Designtime value";
             }
         }
-
+ 
         string _Value = "Gas";
         public string Value { get { return _Value; } set { Set(ref _Value, value); } }
 
@@ -36,9 +37,17 @@ namespace DirectTVRemote.ViewModels {
             await Task.CompletedTask;
         }
 
-        public void GotoDetailsPage() =>
-            NavigationService.Navigate(typeof(Views.DetailPage), Value);
+        public async void GotoDetailsPage() {
+            var myDTV = new DirectTvAPI("http://192.168.1.73:8080");
 
+            var results = await myDTV.TuneToChannel("36");
+            Debug.WriteLine(results);
+        }
+        public async void StbPowerToggle() {
+            var myDTV = new DirectTvAPI("http://192.168.1.73:8080");
+            var results = await myDTV.KeyPress("poweron");
+            Debug.WriteLine(results);
+        }
         public void GotoSettings() =>
             NavigationService.Navigate(typeof(Views.SettingsPage), 0);
 

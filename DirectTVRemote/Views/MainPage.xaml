@@ -93,6 +93,31 @@
                    RelativePanel.Below="parameterResizer"
                    Text="Current Visual State" />
 
+        <Button x:Name="powerButton"
+                Click="{x:Bind ViewModel.StbPowerToggle}" Content="Power"
+                RelativePanel.AlignBottomWith="parameterResizer"
+                RelativePanel.RightOf="parameterResizer" Margin="-98,118,0,-118" RenderTransformOrigin="-2.051,4.578" HorizontalAlignment="Left" Width="61" />
+        <Grid Margin="413,190,-335,-75">
+
+            <Button Click="btn7_Click" x:Name="btn7" Content="7" HorizontalAlignment="Left" VerticalAlignment="Top" Width="42"/>
+            <Button Click="btn8_Click" x:Name="btn8" Content="8" HorizontalAlignment="Left" Margin="47,0,0,0" VerticalAlignment="Top" Width="42"/>
+            <Button Click="btn9_Click" x:Name="btn9" Content="9" HorizontalAlignment="Left" Margin="94,0,0,0" VerticalAlignment="Top" Width="42"/>
+            <Button Click="btn4_Click" x:Name="btn4" Content="4" HorizontalAlignment="Left" Margin="0,37,0,0" VerticalAlignment="Top" Width="42"/>
+            <Button Click="btn5_Click" x:Name="btn5" Content="5" HorizontalAlignment="Left" Margin="47,37,0,0" VerticalAlignment="Top" Width="42"/>
+            <Button Click="btn6_Click" x:Name="btn6" Content="6" HorizontalAlignment="Left" Margin="94,37,0,0" VerticalAlignment="Top" Width="42"/>
+            <Button Click="btn1_Click" x:Name="btn1" Content="1" HorizontalAlignment="Left" Margin="0,74,0,0" VerticalAlignment="Top" Width="42"/>
+            <Button Click="btn2_Click" x:Name="btn2" Content="2" HorizontalAlignment="Left" Margin="47,74,0,0" VerticalAlignment="Top" Width="42"/>
+            <Button Click="btn3_Click"  x:Name="btn3" Content="3" HorizontalAlignment="Left" Margin="94,74,0,0" VerticalAlignment="Top" Width="42"/>
+            <Button Click="btnEqual_Click" x:Name="btnEqual" Content="=" HorizontalAlignment="Left" Margin="0,111,0,0" VerticalAlignment="Top" Width="42"/>
+            <Button Click="btn0_Click" x:Name="btn0" Content="0" HorizontalAlignment="Left" Margin="47,111,0,0" VerticalAlignment="Top" Width="42"/>
+            <Button Click="btnClear_Click" x:Name="btnClear" Content="enter" HorizontalAlignment="Left" Margin="94,111,0,0" VerticalAlignment="Top" Width="42" FontSize="10" Height="32"/>
+
+
+        </Grid>
+
+
     </RelativePanel>
+
+
 </Page>
 

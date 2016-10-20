@@ -1,10 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" IgnorableNamespaces="uap mp">
-  <Identity
-    Name="8cb13749-5c22-483f-be07-e40696f2d37b"
-    Publisher = "CN=Gerard Whittey"
-    Version = "1.0.0.0" /> 
-  <mp:PhoneIdentity PhoneProductId="8cb13749-5c22-483f-be07-e40696f2d37b" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <Identity Name="8cb13749-5c22-483f-be07-e40696f2d37b" Publisher="CN=Gerard Whittey" Version="1.0.0.0" />
+  <mp:PhoneIdentity PhoneProductId="8cb13749-5c22-483f-be07-e40696f2d37b" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>DirectTVRemote</DisplayName>
     <PublisherDisplayName>Gerard Whittey</PublisherDisplayName>
@@ -27,5 +24,6 @@
   </Applications>
   <Capabilities>
     <Capability Name="internetClient" />
+    <Capability Name="privateNetworkClientServer" />
   </Capabilities>
 </Package>
